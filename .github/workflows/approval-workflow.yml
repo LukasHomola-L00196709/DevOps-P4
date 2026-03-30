@@ -16,3 +16,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ADD_LABEL: "approved"
         # REMOVE_LABEL: "awaiting review"
+    - name: Run linter
+      uses: github/super-linter@v7
+      env:
+        DEFAULT_BRANCH: main
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
